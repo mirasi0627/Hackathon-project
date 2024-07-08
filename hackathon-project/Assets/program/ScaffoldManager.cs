@@ -8,6 +8,7 @@ public class ScaffoldManager : MonoBehaviour
     public GameObject scaffold;
     public int spawnZ = -2;
     public List<GameObject> scaffolds;
+    public Vector2 LastGeneratedPos = new Vector2();
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class ScaffoldManager : MonoBehaviour
 
             GameObject sc = Instantiate(scaffold, mouse_point, Quaternion.identity);
             scaffolds.Add(sc);
+            LastGeneratedPos = new Vector2(mouse_point.x, mouse_point.y);
         }
     }
 }

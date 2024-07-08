@@ -1,0 +1,9 @@
+diff a/hackathon-project/Assets/program/scaffold.cs b/hackathon-project/Assets/program/scaffold.cs	(rejected hunks)
+@@ -2,7 +2,6 @@
+ using System.Collections.Generic;
+ using UnityEngine;
+ 
+-public class test3 : MonoBehaviour
+ public class Scaffold : MonoBehaviour
+ {
+ 
