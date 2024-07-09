@@ -29,12 +29,20 @@ public class Scaffold : MonoBehaviour
         if (canChangeSize)
         {
             Vector3 new_size = size;
-            new_size.x = size.x * Mathf.PingPong(Time.time, 1.5);
+            new_size.x = size.x * Mathf.PingPong(Time.time * changeSpeed, 1.5f);
             transform.localScale = new_size;
         }
         else
         {
             transform.localScale = size;
+        }
+
+        GetComponent<BoxCollider2D>().size = new Vector2(size.x, size.y);
+
+
+        if (!GetComponent<Renderer>().isVisible && canDestroy)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
