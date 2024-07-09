@@ -14,7 +14,14 @@ public class Scaffold : MonoBehaviour
     public float changeSpeed = 1.0f;
     public int move_width = 1;
     public Vector3 size = new Vector3(1f, 0.5f, 1f);
-    public Vector3 pos;
+   
+    [SerializeField] private Vector3 pos;
+
+    [SerializeField] private GameObject Manager;
+    [SerializeField] private ScaffoldManager sca_mng;
+    [SerializeField] private List<GameObject> sca_list;
+    [SerializeField] private int ID;
+
 
 
     // Start is called before the first frame update
@@ -22,29 +29,62 @@ public class Scaffold : MonoBehaviour
     {
         pos = transform.position;
         transform.localScale = size;
+        Manager = GameObject.FindWithTag("ScaffoldManager");
+        sca_mng = Manager.GetComponent<ScaffoldManager>();
+        ID = this.gameObject.GetInstanceID();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        sca_list = sca_mng.scaffolds;
+
+        Debug.Log((Random.Range(-1, 1)));
+
+
+        //動かす
         transform.position = new Vector3(pos.x + Mathf.PingPong(Time.time * speed, move_width), pos.y, pos.z);
-        if (canChangeSize)
+        if (canChangeSize) //サイズ変更していいの？
         {
             Vector3 new_size = size;
             new_size.x = size.x * Mathf.PingPong(Time.time * changeSpeed, 1.5f);
             transform.localScale = new_size;
         }
-        else
+        else//だめでした
         {
             transform.localScale = size;
         }
 
-        GetComponent<BoxCollider2D>().size = new Vector2(size.x, size.y);
+        //public変数なのでエディタ上で編集された際にも当たり判定を変更する必要がある
+        GetComponent<BoxCollider2D>().size = new Vector2(size.x, size.y); 
 
-
+        //メインカメラに映らないかつ破壊可能フラグが付与されているなら消滅させる
         if (!GetComponent<Renderer>().isVisible && canDestroy)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && sca_list[sca_list.Count -1 ].GetInstanceID() == this.gameObject.GetInstanceID())
+        {
+            float level = 1.5f; //要調整
+            float length = level * Random.Range(1, 5) * 0.5f; //level * 0.5 ~ 2
+            float x, y;
+            float rnd =  Random.Range(1.5f, 2f);
+
+            bool plusX = (Random.Range(-1, 1) == -1) ? false : true;
+
+            x = transform.position.x + rnd * (plusX ? 1 : -1);
+            y = transform.position.y + rnd;
+
+            Debug.Log(transform.position.x + "+" + rnd + "=" + x);
+            Debug.Log(transform.position.y + "+" + rnd + "=" + y);
+
+            Scaffold new_scaffold = sca_mng.SpawnScaffold(new Vector2(x, y)).GetComponent<Scaffold>();
+            new_scaffold.size = new Vector3(length, 0.5f, 1f);
         }
     }
 }

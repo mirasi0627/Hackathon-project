@@ -123,54 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &377926806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 377926808}
-  - component: {fileID: 377926807}
-  m_Layer: 0
-  m_Name: Scaffold Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &377926807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377926806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63cdbb3c37b222946b2faa93680ea097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaffold: {fileID: 8288197385709579895, guid: 786443a392860f346b9b49a40bc6b890, type: 3}
-  spawnZ: -2
-  scaffolds: []
-  LastGeneratedPos: {x: 0, y: 0}
---- !u!4 &377926808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377926806}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,8 +215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &969054406
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +317,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1109764891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109764892}
+  - component: {fileID: 1109764893}
+  m_Layer: 0
+  m_Name: ScaffoldManageObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109764892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109764891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.1809964, y: 2.5006294, z: 3.8990211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1109764893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109764891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cdbb3c37b222946b2faa93680ea097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaffold: {fileID: 8288197385709579895, guid: 786443a392860f346b9b49a40bc6b890, type: 3}
+  spawnZ: -2
+  scaffolds: []
+  LastGeneratedPos: {x: 0, y: 0}
+  LastTouchObj: {fileID: 0}
 --- !u!1 &1421464747
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,8 +764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a51fe8888118048871ee63582b8e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score_object: {fileID: 2095250095}
-  score: 0
 --- !u!4 &2051291358
 Transform:
   m_ObjectHideFlags: 0
@@ -861,18 +858,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095250095}
   m_CullTransparentMesh: 1
->>>>>>> 3a27e071b6f067a513efcd53c1b88c030ca4a612
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-<<<<<<< HEAD
-  - {fileID: 377926808}
-=======
   - {fileID: 1424364349}
   - {fileID: 1421464750}
   - {fileID: 969054410}
   - {fileID: 1510745120}
   - {fileID: 2051291358}
->>>>>>> 3a27e071b6f067a513efcd53c1b88c030ca4a612
+  - {fileID: 1109764892}
