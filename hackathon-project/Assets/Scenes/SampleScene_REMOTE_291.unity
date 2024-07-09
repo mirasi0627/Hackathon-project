@@ -123,54 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &377926806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 377926808}
-  - component: {fileID: 377926807}
-  m_Layer: 0
-  m_Name: Scaffold Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &377926807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377926806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63cdbb3c37b222946b2faa93680ea097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaffold: {fileID: 8288197385709579895, guid: 786443a392860f346b9b49a40bc6b890, type: 3}
-  spawnZ: -2
-  scaffolds: []
-  LastGeneratedPos: {x: 0, y: 0}
---- !u!4 &377926808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377926806}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,8 +215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< .merge_file_hpx4jq
-=======
 --- !u!1 &969054406
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,18 +811,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095250095}
   m_CullTransparentMesh: 1
->>>>>>> .merge_file_VSnFKR
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-<<<<<<< .merge_file_hpx4jq
-  - {fileID: 377926808}
-=======
   - {fileID: 1424364349}
   - {fileID: 1421464750}
   - {fileID: 969054410}
   - {fileID: 1510745120}
   - {fileID: 2051291358}
->>>>>>> .merge_file_VSnFKR

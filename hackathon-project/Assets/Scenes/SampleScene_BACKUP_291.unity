@@ -263,7 +263,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< .merge_file_hpx4jq
+<<<<<<< HEAD
 =======
 --- !u!1 &969054406
 GameObject:
@@ -861,13 +861,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095250095}
   m_CullTransparentMesh: 1
->>>>>>> .merge_file_VSnFKR
+>>>>>>> 3e339cc613f7aa3f28c45c8c7a4b7d073373b0a1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-<<<<<<< .merge_file_hpx4jq
+<<<<<<< HEAD
   - {fileID: 377926808}
 =======
   - {fileID: 1424364349}
@@ -875,4 +875,4 @@ SceneRoots:
   - {fileID: 969054410}
   - {fileID: 1510745120}
   - {fileID: 2051291358}
->>>>>>> .merge_file_VSnFKR
+>>>>>>> 3e339cc613f7aa3f28c45c8c7a4b7d073373b0a1
