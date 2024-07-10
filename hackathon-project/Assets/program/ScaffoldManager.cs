@@ -40,7 +40,15 @@ public class ScaffoldManager : MonoBehaviour
             Vector3 mouse_point = Camera.main.ScreenToWorldPoint(mp);
 
             SpawnScaffold(new Vector2(mouse_point.x, mouse_point.y)); 
+        }
 
+
+        if (scaffolds.Count <= 0)
+        {
+            SpawnScaffold(
+                new Vector2(
+                    Random.Range(-13f, 3f),
+                    -2.5f));
         }
     }
 
