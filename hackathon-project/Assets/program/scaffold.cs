@@ -57,7 +57,7 @@ public class Scaffold : MonoBehaviour
         }
 
         //public変数なのでエディタ上で編集された際にも当たり判定を変更する必要がある
-        GetComponent<BoxCollider2D>().size = new Vector2(size.x, size.y); 
+        //GetComponent<BoxCollider2D>().size = new Vector2(size.x, size.y); 
 
         //メインカメラに映らないかつ破壊可能フラグが付与されているなら消滅させる
         if (!GetComponent<Renderer>().isVisible && canDestroy)
