@@ -43,20 +43,20 @@ public class Scaffold : MonoBehaviour
         Debug.Log((Random.Range(-1, 1)));
 
 
-        //“®‚©‚·
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         transform.position = new Vector3(pos.x + Mathf.PingPong(Time.time * speed, move_width), pos.y, pos.z);
-        if (canChangeSize) //ƒTƒCƒY•ÏX‚µ‚Ä‚¢‚¢‚ÌH
+        if (canChangeSize) //ï¿½Tï¿½Cï¿½Yï¿½ÏXï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ÌH
         {
             Vector3 new_size = size;
             new_size.x = size.x * Mathf.PingPong(Time.time * changeSpeed, 1.5f);
             transform.localScale = new_size;
         }
-        else//‚¾‚ß‚Å‚µ‚½
+        else//ï¿½ï¿½ï¿½ß‚Å‚ï¿½ï¿½ï¿½
         {
             transform.localScale = size;
         }
 
-        //ƒƒCƒ“ƒJƒƒ‰‚É‰f‚ç‚È‚¢‚©‚Â”j‰ó‰Â”\ƒtƒ‰ƒO‚ª•t—^‚³‚ê‚Ä‚¢‚é‚È‚çÁ–Å‚³‚¹‚é
+        //ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½É‰fï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½Â”jï¿½ï¿½Â”\ï¿½tï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½tï¿½^ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½
         if (!GetComponent<Renderer>().isVisible && canDestroy)
         {
             Destroy(this.gameObject);
@@ -67,7 +67,7 @@ public class Scaffold : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && sca_list[sca_list.Count -1 ].GetInstanceID() == this.gameObject.GetInstanceID())
         {
-            float level = 1.5f; //—v’²®
+            float level = 1.5f; //ï¿½vï¿½ï¿½ï¿½ï¿½
             float length = level * Random.Range(1, 5) * 0.5f; //level * 0.5 ~ 2
             float x, y;
             float rnd =  Random.Range(1.5f, 2f);
