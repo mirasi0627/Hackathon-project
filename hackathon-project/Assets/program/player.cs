@@ -34,9 +34,14 @@ public class test : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && count > 0)
         {
             //rb.velocity = Vector2.zero;
-            Vector2 force = new Vector2(0, 10f);
+            Vector2 force = new Vector2(rb.velocity.x, 10f);
             rb.velocity = force;
         }
+
+        /*if (rb.velocity.x)
+        {
+
+        }*/
     }
     void FixedUpdate()
     {
