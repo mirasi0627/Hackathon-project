@@ -12,6 +12,7 @@ public class ScaffoldManager : MonoBehaviour
     public GameObject LastTouchObj;
     public GameObject PlayerObject;
 
+
     void Awake()
     {
         this.tag = "ScaffoldManager";
@@ -33,15 +34,6 @@ public class ScaffoldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mp = Input.mousePosition;
-            mp.z = spawnZ + 10; //Ç»ÇÒÇ≈Ç©-10Ç≥ÇÍÇÈÇ©ÇÁï‚ê≥
-            Vector3 mouse_point = Camera.main.ScreenToWorldPoint(mp);
-
-            SpawnScaffold(new Vector2(mouse_point.x, mouse_point.y)); 
-        }
-
 
         if (scaffolds.Count <= 0)
         {
