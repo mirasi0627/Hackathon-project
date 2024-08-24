@@ -70,17 +70,18 @@ public class Scaffold : MonoBehaviour
             float level = 1.5f; //�v����
             float length = level * Random.Range(1, 5) * 0.5f; //level * 0.5 ~ 2
             float x, y;
-            float rnd =  Random.Range(1.5f, 2f);
+            float xrnd = Random.Range(-4f, 4f);
+            float yrnd = Random.Range(4f, 5f);
 
             bool plusX = (Random.Range(-1, 1) == -1) ? false : true;
 
-            x = transform.position.x + rnd * (plusX ? 1 : -1);
-            y = transform.position.y + rnd;
+            //x = transform.position.x + xrnd * (plusX ? 1 : -1);
+            y = transform.position.y + yrnd;
 
-            Debug.Log(transform.position.x + "+" + rnd + "=" + x);
-            Debug.Log(transform.position.y + "+" + rnd + "=" + y);
+            //Debug.Log(transform.position.x + "+" + xrnd + "=" + x);
+            //Debug.Log(transform.position.y + "+" + yrnd + "=" + y);
 
-            Scaffold new_scaffold = sca_mng.SpawnScaffold(new Vector2(x, y)).GetComponent<Scaffold>();
+            Scaffold new_scaffold = sca_mng.SpawnScaffold(new Vector2(xrnd, y)).GetComponent<Scaffold>();
             new_scaffold.size = new Vector3(length, 0.5f, 1f);
         }
     }

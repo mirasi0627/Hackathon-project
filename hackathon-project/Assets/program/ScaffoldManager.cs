@@ -39,12 +39,12 @@ public class ScaffoldManager : MonoBehaviour
         {
             SpawnScaffold(
                 new Vector2(
-                    Random.Range(-13f, 3f),
-                    -2.5f));
+                    Random.Range(-3f, 3f),
+                    0.5f));
         }
     }
 
-   public GameObject SpawnScaffold(Vector2 spawnPoint)
+    public GameObject SpawnScaffold(Vector2 spawnPoint)
     {
         GameObject sc = Instantiate(scaffold, spawnPoint, Quaternion.identity);
         scaffolds.Add(sc);
