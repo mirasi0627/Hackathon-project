@@ -1,12 +1,15 @@
+//score
+//Score_ Score, ÉvÉåÉCÉÑÅ[ hackathon_player
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class socorecounter : MonoBehaviour
+public class scorecounter : MonoBehaviour
 {
     public GameObject score_object = null;
-    double maxscore;
+    public double maxscore;
+    double score;
     public GameObject Player = null;
 
     // Start is called before the first frame update
@@ -20,17 +23,13 @@ public class socorecounter : MonoBehaviour
     void Update()
     {
         Vector2 Player_posi = Player.transform.position;
-        if (maxscore < 3.2)
+        score = Player_posi.y + 3.2;
+        if (maxscore < score)
         {
+            maxscore = score;
             Text score_text = score_object.GetComponent<Text>();
-            score_text.text = "score:" + (Player_posi.y + 3.2).ToString("f0") + "M";
+            score_text.text = "score:" + maxscore.ToString("f0") + "M";
         }
-    }
-
-    public double getScore()
-    {
-        double max = maxscore;
-        return max;
     }
     
 }

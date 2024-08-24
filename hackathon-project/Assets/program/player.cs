@@ -1,12 +1,16 @@
+//hackathon_player
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class test : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed = 10;
-    private int jumpcount;
+    public float speed = 5;
+    public scorecounter Score;
+    float y;
+    private int jumplimit;
     SpriteRenderer player;
 
     // Start is called before the first frame update
@@ -14,7 +18,7 @@ public class test : MonoBehaviour
     {
         player = GetComponent<SpriteRenderer>();
         rb = this.GetComponent<Rigidbody2D>();
-        jumpcount = 2;
+        jumplimit = 2;
     }
 
     // Update is called once per frame
@@ -23,34 +27,45 @@ public class test : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             player.flipX = false;
-            Vector2 force = new Vector2(speed * 0.1f, 0);
-            rb.AddForce(force, ForceMode2D.Impulse);
+            Vector2 force = new Vector2(speed * 4f, rb.velocity.y);
+            rb.velocity = force;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            Vector2 force = new Vector2(0f, rb.velocity.y);
+            rb.velocity = force;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             player.flipX = true;
-            Vector2 force = new Vector2(speed * -0.1f, 0);
-            rb.AddForce(force, ForceMode2D.Impulse);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && jumpcount > 0)
-        {
-            Vector2 force = new Vector2(rb.velocity.x, 10f);
+            Vector2 force = new Vector2(speed * -4f, rb.velocity.y);
             rb.velocity = force;
         }
 
-        if(rb.velocity.y == 0)
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            jumpcount = 2;
+            Vector2 force = new Vector2(0f, rb.velocity.y);
+            rb.velocity = force;
         }
-        /*if (rb.velocity.x)
+
+        if (Input.GetKeyDown(KeyCode.Space) && jumplimit > 0)
         {
-
-        }*/
+            Vector2 force = new Vector2(rb.velocity.x, 10f);
+            rb.velocity = force;
+            jumplimit--;
+        }
+        y = (float)Score.maxscore;
+        if (this.transform.position.y < y - 10)
+        {
+            PlayerPrefs.SetFloat("resultscore", (float)Score.maxscore);
+            SceneManager.LoadScene("result");
+        }
     }
-    void FixedUpdate()
-    {
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        jumplimit = 2;
     }
 }

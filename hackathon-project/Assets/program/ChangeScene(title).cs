@@ -1,3 +1,4 @@
+//Button
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,6 @@ public class ChangeScene : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene("mainScene");
+        SceneManager.LoadScene("SampleScene");
     }
 }
